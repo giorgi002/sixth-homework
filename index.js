@@ -25,7 +25,23 @@
 
 
 // third task 👇
-
+// let tryCount = 0;
+// const Max_try = 5;
+// async function getData(){
+//     try {
+//         const res = await fetch('https://jsonplaceholde.typicode.com')
+//         const data = await res.json()
+//         console.log(data);
+//     }catch(e){
+//         tryCount++
+//         if(tryCount<= Max_try){
+//             console.log("retrying" + tryCount);
+//             getData()
+            
+//         }
+//     }
+// }
+// getData()
 
     
 
@@ -44,3 +60,22 @@
 // }
 // }
 // getFastestData().then(res => console.log(res))
+
+
+
+// fifth task 👇
+// const promise1 = new Promise(resolve => setTimeout(() => resolve([1, 2, 3]), 1000));
+// const promise2 = new Promise((_, reject) => setTimeout(() => reject('Promise 2 failed'), 2000));
+// const promise3 = new Promise(resolve => setTimeout(() => resolve([4, 5, 6]), 1500));
+
+// Promise.allSettled([promise1, promise2, promise3])
+//   .then(results => {
+//     const merged = [];
+
+//     results.forEach(result => {
+//       if (result.status === 'fulfilled') {
+//         merged.push(...result.value);
+//       }
+//     });
+//     console.log("Merged array:", merged);
+//   });
